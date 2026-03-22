@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name",
-  description: "Portfolio",
+  title: "Oliver Tran",
+  description:
+    "Portfolio — iOS apps, projects, and contact for Oliver Tran, high school student in San Francisco.",
 };
 
 export default function RootLayout({
