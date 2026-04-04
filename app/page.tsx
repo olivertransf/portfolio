@@ -60,6 +60,14 @@ const site = {
       ],
     },
     {
+      name: "Lienzo",
+      description:
+        "Native SwiftUI Canvas LMS student client — courses, assignments, calendar, inbox, and more.",
+      links: [
+        { label: "GitHub", href: "https://github.com/olivertransf/Lienzo" },
+      ],
+    },
+    {
       name: "IggyWiki",
       description:
         "Resource hub for St. Ignatius College Preparatory.",
