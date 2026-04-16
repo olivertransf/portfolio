@@ -16,6 +16,7 @@ const site = {
   links: [
     { label: "Email", href: "mailto:olivertransf@gmail.com" },
     { label: "GitHub", href: "https://github.com/olivertransf" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/olivertransf/" },
   ],
   projects: [
     {
@@ -52,11 +53,11 @@ const site = {
       ],
     },
     {
-      name: "SATPrep",
+      name: "Studium",
       description:
         "iOS/iPadOS SAT prep — filtering, progress, stats, and iCloud sync.",
       links: [
-        { label: "GitHub", href: "https://github.com/olivertransf/SATPrep" },
+        { label: "GitHub", href: "https://github.com/olivertransf/Studium" },
       ],
     },
     {
