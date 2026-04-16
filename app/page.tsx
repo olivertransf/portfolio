@@ -58,6 +58,10 @@ const site = {
         "iOS/iPadOS SAT prep — filtering, progress, stats, and iCloud sync.",
       links: [
         { label: "GitHub", href: "https://github.com/olivertransf/Studium" },
+        {
+          label: "Website",
+          href: "https://studium-web-six.vercel.app",
+        },
       ],
     },
     {
