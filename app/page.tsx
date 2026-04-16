@@ -60,7 +60,7 @@ const site = {
         { label: "GitHub", href: "https://github.com/olivertransf/Studium" },
         {
           label: "Website",
-          href: "https://studium-web-six.vercel.app",
+          href: "https://studium-prep.vercel.app",
         },
       ],
     },
