@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Atkinson_Hyperlegible } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
+const atkinson = Atkinson_Hyperlegible({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-atkinson",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Oliver Tran",
+  title: "Oliver Tran",
+  description:
+    "High school developer building apps, studying computer science, and composing music.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -23,11 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={atkinson.variable} suppressHydrationWarning>
       <body>
-        {children}
-        <Analytics />
-        <SpeedInsights />
+        <ThemeProvider>
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );
