@@ -8,10 +8,10 @@ import { navLinks } from "@/lib/data";
 export function Header() {
   return (
     <header className="section-pad sticky top-0 z-50 border-b border-border/80 bg-bg/85 backdrop-blur-md">
-      <div className="max-content flex h-16 items-center justify-between gap-6">
+      <div className="max-content grid h-16 grid-cols-[1fr_auto_1fr] items-center gap-4">
         <Link
           href="/"
-          className="group flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          className="group flex w-fit items-center gap-3 justify-self-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="Oliver Tran, home"
         >
           <BrandMark
@@ -23,7 +23,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav aria-label="Primary">
+        <nav aria-label="Primary" className="justify-self-center">
           <ul className="flex items-center gap-1 sm:gap-2">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -38,7 +38,9 @@ export function Header() {
           </ul>
         </nav>
 
-        <ThemeToggle />
+        <div className="justify-self-end">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
