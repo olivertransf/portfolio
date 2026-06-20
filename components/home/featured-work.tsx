@@ -73,34 +73,36 @@ function FeaturedCard({ project }: { project: Project }) {
           <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-muted">
             {project.category} · {project.year}
           </p>
-          {project.liveUrl ? (
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-0.5 inline-flex items-center gap-1.5 transition-colors hover:text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              <span className={titleClass}>{project.title}</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-                className="mt-1 shrink-0 text-muted"
+          <h3 className={`${titleClass} mt-0.5`}>
+            {project.liveUrl ? (
+              <Link
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                <path
-                  d="M6 3.5h6.5V10M9.5 6.5 12.5 3.5M12.5 3.5H9.75M12.5 3.5V6.25M3.5 6v6.5h6.5"
-                  stroke="currentColor"
-                  strokeWidth="1.25"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
-          ) : (
-            <h3 className={`${titleClass} mt-0.5`}>{project.title}</h3>
-          )}
+                {project.title}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  className="mt-1 shrink-0 text-muted"
+                >
+                  <path
+                    d="M6 3.5h6.5V10M9.5 6.5 12.5 3.5M12.5 3.5H9.75M12.5 3.5V6.25M3.5 6v6.5h6.5"
+                    stroke="currentColor"
+                    strokeWidth="1.25"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            ) : (
+              project.title
+            )}
+          </h3>
         </div>
       </div>
 
@@ -170,7 +172,9 @@ export function FeaturedWork() {
   return (
     <section id="projects" className="section-pad py-12 sm:py-14">
       <div className="max-content">
-        <SectionLabel href={githubProfile}>Projects</SectionLabel>
+        <SectionLabel as="h2" href={githubProfile}>
+          Projects
+        </SectionLabel>
 
         <motion.div
           variants={staggerContainer}
