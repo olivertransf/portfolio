@@ -5,38 +5,41 @@ import { socialLinks } from "@/lib/data";
 
 export function Footer() {
   return (
-    <footer id="contact" className="section-pad border-t border-border py-6 sm:py-7">
-      <div className="max-content flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-        <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+    <footer id="contact" className="section-pad border-t border-border py-8 sm:py-7">
+      <div className="max-content flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        <div className="space-y-1 sm:flex sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-1">
           <Link
             href="/"
-            className="flex shrink-0 items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="flex w-fit items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             aria-label="Oliver Tran, home"
           >
             <BrandMark className="h-6 w-6" />
             <span className="text-sm font-bold text-fg">Oliver Tran</span>
           </Link>
-          <span className="hidden text-border-strong sm:inline" aria-hidden="true">
-            ·
-          </span>
           <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted">
             © {new Date().getFullYear()} Oliver Tran
           </p>
         </div>
 
-        <nav aria-label="Social links">
-          <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:gap-x-5">
+        <nav aria-label="Social links" className="border-t border-border pt-5 sm:border-0 sm:pt-0">
+          <ul className="flex w-full items-center justify-between gap-2 sm:w-auto sm:justify-start sm:gap-x-5">
             {socialLinks.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.1em] text-muted transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  aria-label={link.label}
+                  className="inline-flex items-center justify-center rounded-md p-2 text-muted transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:gap-1.5 sm:p-0"
                   {...(link.href.startsWith("http")
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                 >
-                  <LinkIcon name={socialIconNames[link.label]} />
-                  {link.label}
+                  <LinkIcon
+                    name={socialIconNames[link.label]}
+                    className="size-4 sm:size-3.5"
+                  />
+                  <span className="hidden text-[10px] font-bold uppercase tracking-[0.1em] sm:inline">
+                    {link.label}
+                  </span>
                 </Link>
               </li>
             ))}

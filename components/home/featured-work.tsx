@@ -141,7 +141,7 @@ function CompactCard({ project }: { project: Project }) {
         {project.title}
       </h3>
 
-      <p className="mt-2 min-h-[3.25rem] line-clamp-3 flex-1 text-xs leading-snug text-muted">
+      <p className="mt-2 line-clamp-3 flex-1 text-xs leading-snug text-muted sm:min-h-[3.25rem]">
         {project.description}
       </p>
 
@@ -168,7 +168,7 @@ export function FeaturedWork() {
   const rest = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="section-pad py-12 sm:py-14">
+    <section id="projects" className="section-pad py-10 sm:py-14">
       <div className="max-content">
         <SectionLabel href={githubProfile}>Projects</SectionLabel>
 

@@ -24,12 +24,12 @@ export function Header() {
         </Link>
 
         <nav aria-label="Primary" className="justify-self-center">
-          <ul className="flex items-center gap-1 sm:gap-2">
+          <ul className="flex items-center gap-0.5 sm:gap-2">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="rounded-md px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-muted transition-colors duration-200 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="rounded-md px-2 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-muted transition-colors duration-200 hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:px-3 sm:text-xs sm:tracking-[0.12em]"
                 >
                   {link.label}
                 </Link>

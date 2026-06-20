@@ -10,7 +10,7 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 export function Hero() {
   return (
     <section id="home" className="relative border-b border-border section-pad">
-      <div className="max-content relative py-14 sm:py-16 lg:py-20">
+      <div className="max-content relative py-12 sm:py-16 lg:py-20">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
