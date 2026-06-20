@@ -10,7 +10,7 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 export function Hero() {
   return (
     <section id="home" className="relative border-b border-border section-pad">
-      <div className="max-content relative py-12 sm:py-16 lg:py-20">
+      <div className="max-content relative py-14 sm:py-16 lg:py-20">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -24,19 +24,21 @@ export function Hero() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-5 flex items-center gap-4 sm:mt-6 lg:hidden"
+              className="mt-4 flex items-center gap-5 sm:mt-6 sm:gap-6 lg:hidden"
             >
-              <div className="relative h-[4.25rem] w-[4.25rem] shrink-0 sm:h-20 sm:w-20">
-                <ProfileArcs inset={3} />
-                <div className="relative h-full w-full overflow-hidden rounded-full">
-                <Image
-                  src="/profile.png"
-                  alt=""
-                  fill
-                  priority
-                  sizes="80px"
-                  className={profileImageClass}
-                />
+              <div className="relative shrink-0">
+                <div className="relative h-[4.25rem] w-[4.25rem] sm:h-20 sm:w-20">
+                  <ProfileArcs inset={3} />
+                  <div className="relative h-full w-full overflow-hidden rounded-full">
+                    <Image
+                      src="/profile.png"
+                      alt=""
+                      fill
+                      priority
+                      sizes="80px"
+                      className={profileImageClass}
+                    />
+                  </div>
                 </div>
               </div>
               <h1 className="text-[clamp(2rem,6vw,2.75rem)] font-bold leading-[1.08] tracking-tight text-fg">
@@ -53,7 +55,7 @@ export function Hero() {
 
             <motion.p
               variants={fadeUp}
-              className="mt-4 max-w-lg text-pretty text-[15px] leading-relaxed text-muted sm:mt-5 sm:text-base"
+              className="mt-5 max-w-lg text-pretty text-[15px] leading-relaxed text-muted sm:mt-5 sm:text-base lg:mt-4"
             >
               High school student focused on computer science, native app
               development, and music.
