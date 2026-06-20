@@ -8,15 +8,15 @@ import { navLinks } from "@/lib/data";
 export function Header() {
   return (
     <header className="section-pad sticky top-0 z-50 border-b border-border/80 bg-bg/85 backdrop-blur-md">
-      <div className="max-content grid h-16 grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <div className="max-content grid h-16 grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-4">
         <Link
           href="/"
-          className="group flex w-fit items-center gap-3 justify-self-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          className="group flex shrink-0 items-center gap-3 justify-self-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="Oliver Tran, home"
         >
           <BrandMark
             size={28}
-            className="h-7 w-7 transition-transform duration-300 group-hover:scale-105"
+            className="size-7 shrink-0 transition-transform duration-300 group-hover:scale-105"
           />
           <span className="hidden text-xs font-bold uppercase tracking-[0.12em] text-muted sm:inline">
             Oliver Tran
@@ -38,7 +38,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="justify-self-end">
+        <div className="shrink-0 justify-self-end">
           <ThemeToggle />
         </div>
       </div>
