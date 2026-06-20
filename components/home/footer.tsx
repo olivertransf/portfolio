@@ -8,7 +8,7 @@ export function Footer() {
     <footer id="contact" className="section-pad border-t border-border py-6 sm:py-7">
       <div className="max-content flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-x-4 sm:gap-y-3">
         <nav aria-label="Social links" className="sm:order-2">
-          <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:justify-end sm:gap-x-5">
+          <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 sm:justify-end sm:gap-x-5">
             {socialLinks.map((link) => (
               <li key={link.label}>
                 <Link
