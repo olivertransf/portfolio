@@ -4,7 +4,7 @@ type SectionLabelProps = {
   children: React.ReactNode;
   className?: string;
   href?: string;
-  as?: "p" | "h2";
+  as?: "p" | "h1" | "h2";
 };
 
 const labelClass =
@@ -17,7 +17,7 @@ export function SectionLabel({
   as = "p",
 }: SectionLabelProps) {
   const Tag = as;
-  const headingClass = as === "h2" ? "m-0" : "";
+  const headingClass = as === "h2" || as === "h1" ? "m-0" : "";
 
   if (href) {
     return (

@@ -66,13 +66,13 @@ export function Hero() {
               className="mt-7 flex flex-wrap gap-2.5 sm:mt-8"
             >
               <Link
-                href="#projects"
+                href="/#projects"
                 className="inline-flex items-center rounded-lg bg-accent px-4 py-2 text-sm font-bold text-surface-raised transition-[opacity,transform] duration-200 hover:scale-[1.02] hover:opacity-90 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-[#0a0a0a]"
               >
                 View projects
               </Link>
               <Link
-                href="#contact"
+                href="/#contact"
                 className="inline-flex items-center rounded-lg border border-border-strong bg-surface-raised px-4 py-2 text-sm font-bold text-fg transition-[colors,transform] duration-200 hover:scale-[1.02] hover:border-accent hover:text-accent active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 Contact

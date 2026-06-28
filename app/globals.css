@@ -68,4 +68,12 @@
   .max-content {
     @apply mx-auto max-w-6xl;
   }
+
+  .blog-prose {
+    @apply space-y-5 text-[15px] leading-relaxed text-fg sm:text-base;
+  }
+
+  .blog-prose a {
+    @apply font-medium text-fg underline decoration-border-strong underline-offset-2 transition-colors hover:text-muted;
+  }
 }
