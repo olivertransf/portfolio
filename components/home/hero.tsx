@@ -26,17 +26,10 @@ export function Hero() {
               variants={fadeUp}
               className="mt-4 sm:mt-6"
             >
-              <h1 className="text-[clamp(2rem,6vw,2.75rem)] font-bold leading-[1.08] tracking-tight text-fg">
+              <h1 className="text-[clamp(2rem,6vw,3.5rem)] font-bold leading-[1.08] tracking-tight text-fg">
                 Oliver Tran
               </h1>
             </motion.div>
-
-            <motion.h1
-              variants={fadeUp}
-              className="mt-6 hidden text-[clamp(2.5rem,4vw,3.5rem)] font-bold leading-[1.05] tracking-tight text-fg lg:block"
-            >
-              Oliver Tran
-            </motion.h1>
 
             <motion.p
               variants={fadeUp}
