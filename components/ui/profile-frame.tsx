@@ -63,8 +63,8 @@ export function ProfileFrame({ className = "" }: ProfileFrameProps) {
         <ProfileArcs />
         <div className="relative h-full w-full overflow-hidden rounded-full transition-transform duration-300 hover:scale-[1.02]">
           <Image
-            src="/profile.png"
-            alt="Oliver Tran playing cello"
+            src="/anon-profile.svg"
+            alt="Anonymous profile"
             fill
             priority
             sizes="(max-width: 1024px) 192px, 208px"

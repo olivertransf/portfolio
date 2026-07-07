@@ -18,7 +18,7 @@ export function ProfilePhoto({
       className={`relative overflow-hidden rounded-full ring-1 ring-border ${className}`}
     >
       <Image
-        src="/profile.png"
+        src="/anon-profile.svg"
         alt={alt}
         fill
         priority={priority}
