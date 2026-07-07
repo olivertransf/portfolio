@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ProfileFrame, ProfileArcs, profileImageClass } from "@/components/ui/profile-frame";
+// profile image removed — profile-frame import omitted
 import { SectionLabel } from "@/components/ui/section-label";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -24,23 +24,8 @@ export function Hero() {
 
             <motion.div
               variants={fadeUp}
-              className="mt-4 flex items-center gap-5 sm:mt-6 sm:gap-6 lg:hidden"
+              className="mt-4 sm:mt-6"
             >
-              <div className="relative shrink-0">
-                <div className="relative h-[4.25rem] w-[4.25rem] sm:h-20 sm:w-20">
-                  <ProfileArcs inset={3} />
-                  <div className="relative h-full w-full overflow-hidden rounded-full">
-                    <Image
-                    src="/anon-profile.svg"
-                      alt=""
-                      fill
-                      priority
-                      sizes="80px"
-                      className={profileImageClass}
-                    />
-                  </div>
-                </div>
-              </div>
               <h1 className="text-[clamp(2rem,6vw,2.75rem)] font-bold leading-[1.08] tracking-tight text-fg">
                 Oliver Tran
               </h1>
@@ -71,21 +56,9 @@ export function Hero() {
               >
                 View projects
               </Link>
-              <Link
-                href="/#contact"
-                className="inline-flex items-center rounded-lg border border-border-strong bg-surface-raised px-4 py-2 text-sm font-bold text-fg transition-[colors,transform] duration-200 hover:scale-[1.02] hover:border-accent hover:text-accent active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                Contact
-              </Link>
             </motion.div>
           </div>
 
-          <motion.div
-            variants={fadeUp}
-            className="hidden lg:block lg:-translate-x-10 xl:-translate-x-12"
-          >
-            <ProfileFrame />
-          </motion.div>
         </motion.div>
       </div>
     </section>

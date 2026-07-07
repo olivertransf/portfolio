@@ -16,7 +16,6 @@ export const navLinks = [
   { label: "Home", href: "/#home" },
   { label: "Projects", href: "/#projects" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export const projects: Project[] = [
@@ -87,9 +86,5 @@ export const socialLinks = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/olivertransf/",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/olivertransf/",
   },
 ] as const;
