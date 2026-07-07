@@ -15,7 +15,6 @@ export type Project = {
 export const navLinks = [
   { label: "Home", href: "/#home" },
   { label: "Projects", href: "/#projects" },
-  { label: "Blog", href: "/blog" },
 ] as const;
 
 export const projects: Project[] = [
