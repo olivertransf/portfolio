@@ -39,6 +39,7 @@ export const projects: Project[] = [
     description:
       "One photo a day, one time-lapse. Shoot on iPhone or from your Mac menu bar.",
     stack: ["Swift", "SwiftUI"],
+    liveUrl: "https://pocket-pic.vercel.app/",
     github: "https://github.com/olivertransf/PocketPic",
     year: "2025",
     category: "iOS · macOS",
