@@ -7,10 +7,6 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { navLinks } from "@/lib/data";
 
 function isActiveNavLink(pathname: string, href: string): boolean {
-  if (href === "/blog") {
-    return pathname.startsWith("/blog");
-  }
-
   return href.startsWith("/#") && pathname === "/";
 }
 
