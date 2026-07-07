@@ -7,11 +7,11 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { navLinks } from "@/lib/data";
 
 function isActiveNavLink(pathname: string, href: string): boolean {
-  if (href === "/blog") {
-    return pathname.startsWith("/blog");
+  // treat hash links as active only on home, otherwise exact match
+  if (href.startsWith("/#")) {
+    return pathname === "/";
   }
-
-  return href.startsWith("/#") && pathname === "/";
+  return href === pathname;
 }
 
 export function Header() {
