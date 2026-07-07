@@ -31,7 +31,7 @@ export function Hero() {
                   <ProfileArcs inset={3} />
                   <div className="relative h-full w-full overflow-hidden rounded-full">
                     <Image
-                      src="/profile.png"
+                    src="/anon-profile.svg"
                       alt=""
                       fill
                       priority

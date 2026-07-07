@@ -83,7 +83,6 @@ export const projects: Project[] = [
 export const githubProfile = "https://github.com/olivertransf";
 
 export const socialLinks = [
-  { label: "Email", href: "mailto:olivertransf@gmail.com" },
   { label: "GitHub", href: githubProfile },
   {
     label: "LinkedIn",
