@@ -1,0 +1,13 @@
+---
+description: Main portfolio header nav avoids hash URLs
+globs: components/home/header.tsx, components/home/hero.tsx, lib/data.ts
+alwaysApply: false
+---
+
+# Portfolio header links
+
+Do not use hash hrefs (`/#home`, `/#projects`) in the main site header or hero CTA.
+
+- Home scrolls to the top of the page (`window.scrollTo`); Projects scrolls with a small offset above the section (~40px) so it clears the sticky header
+- Keep section `id` attributes for targeting where needed; do not put them in the address bar
+- Active nav state should follow the visible section, not mark every home-page link as current

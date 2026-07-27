@@ -1,0 +1,11 @@
+---
+description: Keep the portfolio home page light and snappy
+globs: "{app/page.tsx,app/layout.tsx,components/home/**,next.config.ts}"
+alwaysApply: false
+---
+
+# Portfolio performance
+
+- Prefer server components on the home page. Keep `"use client"` only for interactive bits (header scroll spy, theme toggle, hero CTA).
+- Do not add framer-motion (or similar animation libraries) — use CSS (`animate-fade-up`, hover transforms) with `prefers-reduced-motion` respect.
+- Scroll may use a subtle one-shot reveal (`ScrollReveal` / `.scroll-reveal`) on project cards. Respect `prefers-reduced-motion`. Content already on screen at mount must render immediately (`is-instant`).

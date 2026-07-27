@@ -1,0 +1,13 @@
+---
+description: Use proxy.ts instead of deprecated middleware.ts
+globs: proxy.ts, middleware.ts, next.config.*
+alwaysApply: false
+---
+
+# Next.js proxy convention
+
+- Next.js 16+ renamed `middleware` → `proxy`. Do not create or revive `middleware.ts`.
+- File: `proxy.ts` at the project root (same level as `app/`).
+- Export: `export async function proxy(request: NextRequest)` (or default export named accordingly).
+- `export const config.matcher` still works the same way.
+- Codemod if needed: `npx @next/codemod@canary middleware-to-proxy .`

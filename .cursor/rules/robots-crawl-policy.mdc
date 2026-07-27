@@ -1,0 +1,10 @@
+---
+description: Portfolio robots allow all crawlers including AI
+globs: app/robots.ts,next.config.ts,app/layout.tsx
+alwaysApply: false
+---
+
+# Robots / scraping policy
+
+- Allow crawlers, including known AI scrapers. `robots.txt` should `Allow: /` for `*`.
+- Do not add GPTBot/ClaudeBot/etc. disallow lists or `noai` / `noimageai` headers on this site.
